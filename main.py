@@ -1,11 +1,11 @@
 from flask import *
 import requests
 
-app = flask(__app__)
+app = flask(__name__)
 
-@app.route('/', methods=["GET | POST"]
+@app.route('/', methods=["GET",  "POST"])
 def serve_index():
-  render_template("index.html")
+  return render_template("index.html")
 
 
 if __name__ == 'main':
